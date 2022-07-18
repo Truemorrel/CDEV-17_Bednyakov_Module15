@@ -5,13 +5,9 @@ namespace Task_15_1_4
 {
     public static class CharactersExtension
     {
-        public static char[] CoupledChars(this string first, string second)
+        public static IEnumerable<TSource> CoupledChars<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second)
         {
-            IEnumerable<char> charsFirst = first.ToCharArray();
-            char[] charsSecond = second.ToCharArray();
-            var result = charsFirst.Intersect(charsSecond);
-
-            return result.ToArray();
+            return first.Intersect(second).ToArray();
         }
     }
 }

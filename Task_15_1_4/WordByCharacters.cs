@@ -7,7 +7,7 @@ namespace Task_15_1_4
     {
         public static IEnumerable<TSource> CoupledChars<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second)
         {
-            return first.Intersect(second).ToArray();
+            return first.Intersect(second);
         }
     }
 }

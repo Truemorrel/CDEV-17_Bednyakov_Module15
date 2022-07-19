@@ -16,7 +16,8 @@ namespace Task_15_1_6
             }
             IEnumerable<char> result = inputString.ToCharArray().Except(spacers);
             result = result.Union(result);
-            Console.WriteLine(result.ToArray()); ;
+            Console.WriteLine(result.ToArray());
+
         }
     }
 }

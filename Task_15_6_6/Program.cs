@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Task_15_6_6
 {
-    class Program
+    partial class Program
     {
         static void Main(string[] args)
         {
@@ -13,7 +12,7 @@ namespace Task_15_6_6
                new Classroom { Students = {"Evgeniy", "Sergey", "Andrew"}, },
                new Classroom { Students = {"Anna", "Viktor", "Vladimir"}, },
                new Classroom { Students = {"Bulat", "Alex", "Galina"}, }
-           };
+            };
             var allStudents = GetAllStudents(classes);
 
             Console.WriteLine(string.Join(" ", allStudents));
@@ -22,11 +21,6 @@ namespace Task_15_6_6
         static string[] GetAllStudents(Classroom[] classes)
         {
             return classes.SelectMany(c => c.Students.Select(c => c)).ToArray();
-        }
-
-        public class Classroom
-        {
-            public List<string> Students = new List<string>();
         }
     }
 }
